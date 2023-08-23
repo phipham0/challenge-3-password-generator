@@ -10,6 +10,7 @@ at the center of the screen.
 This project was the most fun for me yet. I find myself to be a more logical person, and I feel like javascript is the best way to represent that out of CSS and HTML. Because of this,
 I was really motivated to work through the logic of the validations using condition statements and functions. I haven't worked with prompts, confirms, and alerts before, so this was a 
 great learning experience. Overall, this was a fun project, isolating my focus on purely javascript and creating the logic of the website.
+
 ## Installation
 
 To install the project, clone the repository onto your PC.
@@ -17,19 +18,22 @@ Enter the directory that has the cloned repository and open (Double click) the i
 
 To access the webpage, click the link below:
 
-https://phipham0.github.io/phipham-challenge-2/
+https://phipham0.github.io/challenge-3-password-generator/
 
 ## Usage
 
-There are three interactive links in the Navigation Bar in the upper right corner. Each link, About Me, My Work, and Contact Me,
-will send the user down the webpage to more information. Also, in the work section, there are two clickable cards/links that will send you to that appropriate project.
-At the end of the page, there are links for my personal information. For the rest of the page, the text can be read and the webpage can be scrolled through.
+To start, click the red "Generate Password" button. This will ask the user to insert the number of characters in the password. Be sure to enter a number 
+between 7 and 129. Anything else will be an invalid answer, and the user will be asked to enter again. After, there will be four confirms asking if the user wants
+to include a character type. Clicking "OK" on the confirm will add the character type, and clicking "Cancel" will not add the character type. If no confirms are added, the user will
+go through the list of prompts again. After all the prompts and confirms are added, the password will be generated inside the center text box.
 
 
-![webpage1](./assets/Images/webpage1.png)
-
-![webpage2](./assets/Images/webpage2.png)
-
+![webpage1](./assets/Images/webpage.png)
+![characterLength](./assets/Images/password-length-prompt.png)
+![lowercase](./assets/Images/lowercase.png)
+![uppercase](./assets/Images/uppercase.png)
+![numbers](./assets/Images/numbers.png)
+![special](./assets/Images/special.png)
 
 ## License
 
