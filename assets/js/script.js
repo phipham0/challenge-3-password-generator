@@ -21,6 +21,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+// Generates password in textbox
 function generatePassword(){
   const lowercase = "abcdefghijklmnopqrstuvwxyz";
   const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -29,6 +30,7 @@ function generatePassword(){
   var charBank = "";
   var password = "";
 
+  // Adds character type banks together according to variable
   if (containsLowercase){
     charBank += lowercase;
   }
@@ -46,14 +48,15 @@ function generatePassword(){
     password += charBank.charAt(random);
 
   }
-
   return password;
 }
 
+// Prompts for password criteria
 function promptCriteria() {
   var notValidLength = true;
   var notValidChars = true;
 
+  // Password length prompt
   while (notValidLength) {
     passwordLength = prompt("Please type the length of your password. It must be at least 8 characters and no longer than 128 characters.");
     if (validateLength(passwordLength) == false){
@@ -64,29 +67,31 @@ function promptCriteria() {
     }
   }
   
+  // Prompts for character types
   while (notValidChars){
     var count = 0;
 
+    // Lowercase prompt
     containsLowercase = confirm("Will your password include LOWERCASE characters?");
     if (containsLowercase) {
       count++;
     }
-
+    // Uppercase prompt
     containsUppercase = confirm("Will your password include UPPERCASE characters?");
     if (containsUppercase) {
       count++;
     }
-
+    //Numeric prompt
     containsNumeric = confirm("Will your password include NUMBERS?");
     if (containsNumeric) {
       count++;
     }
-
+    //Special prompt
     containsSpecial = confirm("Will your password include SPECIAL characters (e.g., ! # $ % &)?");
     if (containsSpecial) {
       count++;
     }
-
+    // Validation if no prompts answered
     if (count < 1) {
       alert("Please click OK for at least one character type. ")
     }
@@ -96,6 +101,7 @@ function promptCriteria() {
   }
 }
 
+// Validation for length of password
 function validateLength(length) {
   var notNaN = !isNaN(length);
   var notNull = length != null;
